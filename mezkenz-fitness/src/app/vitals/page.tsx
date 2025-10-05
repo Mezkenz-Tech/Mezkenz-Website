@@ -40,8 +40,9 @@ export default function VitalsPage() {
       const next = await (await fetch("/api/readiness")).json();
       setLastReadiness(next.readiness ?? null);
       setVitals({});
-    } catch (e: any) {
-      setMsg(e.message);
+  } catch (e) {
+      const message = e instanceof Error ? e.message : "Failed";
+      setMsg(message);
     } finally {
       setSaving(false);
     }
