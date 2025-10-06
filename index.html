@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adaptive Fitness Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <h1>Adaptive Fitness Planner</h1>
+        <p>
+          Track your workouts, monitor readiness, and tailor training intensity
+          with MBTI-informed coaching cues.
+        </p>
+      </div>
+      <div class="hero__summary" id="readinessSummary"></div>
+    </header>
+
+    <main>
+      <section class="card" aria-labelledby="workout-tracker-heading">
+        <div class="card__header">
+          <h2 id="workout-tracker-heading">Workout Log</h2>
+          <p>Capture every set so you can track progress with precision.</p>
+        </div>
+
+        <form id="exerciseForm" class="form-grid">
+          <label>
+            Exercise
+            <input
+              type="text"
+              name="exercise"
+              placeholder="Back Squat"
+              required
+            />
+          </label>
+          <label>
+            Sets
+            <input type="number" name="sets" min="1" max="20" required />
+          </label>
+          <label>
+            Reps / Set
+            <input type="number" name="reps" min="1" max="50" required />
+          </label>
+          <label>
+            Rest (sec)
+            <input type="number" name="rest" min="0" max="600" required />
+          </label>
+          <label>
+            RPE
+            <input type="number" name="rpe" min="1" max="10" required />
+          </label>
+          <label>
+            Time Under Tension / Rep (sec)
+            <input
+              type="number"
+              name="tut"
+              min="0"
+              step="0.1"
+              placeholder="3"
+              required
+            />
+          </label>
+          <button type="submit" class="btn">Add Set</button>
+        </form>
+
+        <div class="table-wrapper" role="region" aria-live="polite">
+          <table>
+            <caption class="sr-only">Logged exercises</caption>
+            <thead>
+              <tr>
+                <th scope="col">Exercise</th>
+                <th scope="col">Sets</th>
+                <th scope="col">Reps</th>
+                <th scope="col">Rest</th>
+                <th scope="col">RPE</th>
+                <th scope="col">TUT</th>
+                <th scope="col">Volume</th>
+                <th scope="col"><span class="sr-only">Remove</span></th>
+              </tr>
+            </thead>
+            <tbody id="exerciseTableBody"></tbody>
+          </table>
+        </div>
+
+        <div class="stats" id="exerciseStats"></div>
+      </section>
+
+      <section class="card" aria-labelledby="readiness-heading">
+        <div class="card__header">
+          <h2 id="readiness-heading">Readiness Checklist</h2>
+          <p>
+            Keep tabs on vital signs and recovery to decide if it is time to push
+            or pull back.
+          </p>
+        </div>
+        <form id="readinessForm" class="form-grid">
+          <label>
+            Resting Heart Rate (bpm)
+            <input
+              type="number"
+              name="heartRate"
+              min="30"
+              max="220"
+              required
+            />
+          </label>
+          <label>
+            Blood Pressure (Systolic)
+            <input type="number" name="systolic" min="60" max="220" required />
+          </label>
+          <label>
+            Blood Pressure (Diastolic)
+            <input type="number" name="diastolic" min="30" max="140" required />
+          </label>
+          <label>
+            Heart Rate Variability (ms)
+            <input type="number" name="hrv" min="0" max="250" required />
+          </label>
+          <label>
+            Sleep (hours)
+            <input type="number" name="sleep" min="0" max="12" step="0.1" required />
+          </label>
+          <label>
+            Muscle Soreness (1-10)
+            <input type="number" name="soreness" min="1" max="10" required />
+          </label>
+          <button type="submit" class="btn">Evaluate Readiness</button>
+        </form>
+        <div class="readiness-result" id="readinessResult" aria-live="polite"></div>
+      </section>
+
+      <section class="card" aria-labelledby="mbti-heading">
+        <div class="card__header">
+          <h2 id="mbti-heading">MBTI Alignment</h2>
+          <p>
+            Discover how your personality preferences can guide workout style,
+            environment, and accountability.
+          </p>
+        </div>
+
+        <form id="mbtiForm" class="mbti-form">
+          <ol id="mbtiQuestions"></ol>
+          <button type="submit" class="btn">Generate MBTI Plan</button>
+        </form>
+        <div class="mbti-result" id="mbtiResult" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Data stays in your browser. Refresh to start fresh or export via Copy
+        buttons.
+      </p>
+      <button id="copyWorkout" class="btn btn--ghost">Copy Workout Log</button>
+      <button id="copyPlan" class="btn btn--ghost">Copy Readiness &amp; Plan</button>
+    </footer>
+
+    <template id="questionTemplate">
+      <li class="question-item">
+        <fieldset>
+          <legend></legend>
+          <div class="question-options"></div>
+        </fieldset>
+      </li>
+    </template>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
