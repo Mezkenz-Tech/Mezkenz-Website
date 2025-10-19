@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Managed IT Support",
+    "description": "Unlimited helpdesk, patching, endpoint management, and device onboarding."
+  },
+  {
+    "title": "Cloud Migrations",
+    "description": "Email and file moves to Google Workspace or Microsoft 365 with zero-downtime cutovers."
+  },
+  {
+    "title": "Cybersecurity",
+    "description": "EDR, MFA rollout, phishing protection, monthly security reports."
+  },
+  {
+    "title": "Networks & Wi-Fi",
+    "description": "Business-grade setup, VLANs, guest access, and remote troubleshooting."
+  },
+  {
+    "title": "Backup & DR",
+    "description": "Automated backups with 30–365 day retention and disaster recovery playbooks."
+  }
+]

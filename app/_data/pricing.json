@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Starter",
+    "description": "For teams up to 10",
+    "price": "€299/mo",
+    "features": [
+      "Unlimited helpdesk",
+      "Patching",
+      "10 devices"
+    ]
+  },
+  {
+    "name": "Growth",
+    "description": "For 11–50",
+    "price": "€899/mo",
+    "features": [
+      "50 devices",
+      "EDR",
+      "Monthly security report"
+    ]
+  },
+  {
+    "name": "Scale",
+    "description": "51+",
+    "price": "Custom",
+    "features": [
+      "Onboarding assistance",
+      "Quarterly roadmap",
+      "Dedicated TAM"
+    ]
+  }
+]

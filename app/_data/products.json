@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Atlas Support Plan",
+    "type": "Subscription",
+    "description": "Unlimited helpdesk + monitoring.",
+    "includes": [
+      "Response SLA < 1hr",
+      "Software updates",
+      "Inventory"
+    ],
+    "price": "€49/user/mo",
+    "slug": "atlas-support-plan"
+  },
+  {
+    "name": "Atlas Endpoint Security",
+    "type": "Subscription",
+    "description": "Managed EDR + threat hunting.",
+    "includes": [
+      "EDR agent",
+      "Incident response"
+    ],
+    "price": "€7/device/mo",
+    "slug": "atlas-endpoint-security"
+  },
+  {
+    "name": "Atlas Cloud Backup",
+    "type": "Subscription",
+    "description": "Google Workspace / M365 backups.",
+    "includes": [
+      "Daily snapshots",
+      "Point-in-time restore"
+    ],
+    "price": "€3/user/mo",
+    "slug": "atlas-cloud-backup"
+  },
+  {
+    "name": "Site Audit",
+    "type": "One-time",
+    "description": "Security & performance audit.",
+    "includes": [
+      "Report",
+      "30-minute debrief"
+    ],
+    "price": "€399 fixed",
+    "slug": "site-audit"
+  }
+]
