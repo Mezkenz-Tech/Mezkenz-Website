@@ -1,0 +1,24 @@
+[
+  {
+    "title": "How to Prepare for a Zero-Downtime Cloud Migration",
+    "excerpt": "A step-by-step approach to planning mail and file migrations without disrupting work.",
+    "slug": "zero-downtime-cloud-migration",
+    "date": "2024-09-12",
+    "author": "Atlas IT Solutions",
+    "readingTime": "6 min",
+    "content": [
+      {
+        "heading": "Map your current environment",
+        "body": "Inventory user accounts, shared mailboxes, and file permissions before picking tooling. Document what moves, what stays, and owners for approvals."
+      },
+      {
+        "heading": "Communicate early and often",
+        "body": "Run kickoff sessions, share timelines, and give leaders a preview environment. Clear expectations keep teams confident on cutover day."
+      },
+      {
+        "heading": "Pilot before launch",
+        "body": "Migrate a small group to validate identity, MFA, and device policies. Capture feedback and adjust runbooks before you migrate the full company."
+      }
+    ]
+  }
+]
